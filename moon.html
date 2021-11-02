@@ -12,9 +12,17 @@
     </style>
   </head>
   <body>
-    <a class="weatherwidget-io" href="https://forecast7.com/en/35d70139d62/ogikubo/" data-font="Courier New" data-icons="Climacons Animated" data-basecolor="#2f3437" data-textcolor="#ffffff" data-suncolor="#AA8ED6" data-mooncolor="#AA8ED6" data-raincolor="#AA8ED6" data-snowcolor="#AA8ED6" >Ogikubo, Suginami City, Tokyo, Japan</a>
-<script>
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-</script>
+    <!-- © wdisseny -->
+    <div id="contain_moon">
+      <div>
+      </div>
+      <div>
+      </div>
+      <div>
+      </div>
+      <div>
+      </div>
+    </div>
+    <script>(function(){var d=new Date().getDate();var m=document.querySelectorAll("#contain_moon div");var a=new XMLHttpRequest();var url="https://www.icalendar37.net/lunar/api/?lang=en&month="+(new Date().getMonth()+1)+"&year="+(new Date().getFullYear())+"&size=&lightColor=rgb(245,245,245)&shadeColor=rgb(17,17,17)&t&LDZ="+new Date(new Date().getFullYear(),new Date().getMonth(),1)/1000+"";a.onreadystatechange=function(){if(a.readyState==4&&a.status==200){var b=JSON.parse(a.responseText);m[1].innerHTML=b.phase[d].svg;if(typeof moon_widget_loaded=="function")moon_widget_loaded(b)}};a.open("GET",url,true);a.send()})()</script>
   </body>
 </html>
