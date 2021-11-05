@@ -27,11 +27,31 @@
       color: #fff;
       display: block;
       font-family: iawriter-mono, Nitti, Menlo, Courier, monospace;
+      font-size: 1em;
       font-weight: bold;
-      margin: 5% auto 0;
+      margin: 5% auto;
       padding: 0.5em;
       text-align: right;
       width: 80%;
+    }
+    .calculator__row1 {
+      display: flex;
+      margin: 0 auto 2%;
+      width: calc(80% + 1em);
+    }
+    .button {
+      background-color: rgba(0, 0, 0, 0);
+      border: 1px solid #fff;
+      border-radius: 5px;
+      color: #fff;
+      font-family: iawriter-mono, Nitti, Menlo, Courier, monospace;
+      font-size: 1em;
+      font-weight: bold;
+      margin-right: 1%;
+      padding: 0.5em;
+    }
+    .button:last-child{
+      margin-right: 0;
     }
   </style>
 </head>
@@ -44,7 +64,6 @@
       <div class="calculator__row1">
         <button class="button">Rad</button>
         <button class="button">Deg</button>
-        <h1 style="font-size: 200%;margin-left: 230px;margin-right: 20px;"></h1>
         <button class="button" id="clean">AC</button>
       </div>
       <div class="calculator__row2">
